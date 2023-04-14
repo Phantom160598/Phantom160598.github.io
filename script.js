@@ -175,7 +175,7 @@
 
             // Überprüfen der position
           function isAdjacent(row, column) {
-            if (clicks === 0 && !clicks === 2) {
+            if (clicks === 0 && clicks <= 2) {
               return true;
             } else if (lastRow === row && Math.abs(lastColumn - column) <= 1) {
               return true;
