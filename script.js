@@ -186,7 +186,7 @@
             } else {
               return false;
             }
-            if (clicks === 2) {
+            if (clicks > 2) {
             if (lastRow === row && Math.abs(lastColumn - column) <= 2) {
               return true;
             } else if (lastColumn === column && Math.abs(lastRow - row) <= 2) {
