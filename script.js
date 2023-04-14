@@ -173,6 +173,7 @@
           // Entferne die verwendete Zahl aus dem Array
           Spielfeld.splice(index, 1);
 
+            // Überprüfen der position
           function isAdjacent(row, column) {
             if (clicks === 0) {
               return true;
@@ -181,6 +182,16 @@
             } else if (lastColumn === column && Math.abs(lastRow - row) <= 1) {
               return true;
             } else if (Math.abs(lastRow - row) === 1 && Math.abs(lastColumn - column) === 1) {
+              return true;
+            } else {
+              return false;
+            }
+             return true;
+            } else if (lastRow === row && Math.abs(lastColumn - column) <= 2) {
+              return true;
+            } else if (lastColumn === column && Math.abs(lastRow - row) <= 2) {
+              return true;
+            } else if (Math.abs(lastRow - row) === 2 && Math.abs(lastColumn - column) === 2) {
               return true;
             } else {
               return false;
