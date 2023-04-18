@@ -12,6 +12,7 @@
 
 <body class="background-dark">
     <img id="hilfe" src="img/hilfe.png" height="50px" width="50px">
+    <img id="einstellungen" src="img/einstellungen.png" alt="Settings">
     <p>Das ganze ist noch eine Beta und ein paar sachen funktionieren noch nicht.</p>
 
     <div id="overlay" style="display: none;">
@@ -29,6 +30,18 @@
         <strong>3.</strong> Die dritte Zahl wird entweder addiert oder subtrahiert
       </div>
       <img id="close" src="img/close.png" height="65px" width="65px" style="display: none;">
+    </div>
+
+    <div id="overlay2" style="display: none;">
+      <div id="text">
+        <p id="titel">Spielfeldgröße:</p>
+        <select id="größe" name="größe">
+          <option value="6x6">6x6</option>
+          <option value="7x7" selected>7x7</option>
+          <option value="8x8">8x8</option>
+        </select>
+      </div>
+      <img id="closesettings" src="img/close.png" height="65px" width="65px" style="display: none;">
     </div>
 
     <div class="mitte" id="timer">00:00</div>
