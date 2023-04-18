@@ -1,10 +1,10 @@
 .background-dark {
-    background-color: gray;
+  background-color: gray;
 }
 
 p {
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
 }
 
 button {
@@ -26,11 +26,22 @@ margin: 0 auto;
 }
 
 .mitte {
-  justify-content: center;
-  display: flex;
+justify-content: center;
+display: flex;
 }
 
 #overlay {
+position: fixed;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+background-color: rgba(255, 255, 255, 0.9);
+z-index: 9999;
+text-align: center;
+}
+
+#overlay2 {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -42,22 +53,30 @@ margin: 0 auto;
 }
 
 #titel {
-  font-size: 25px;
-  font-weight: bold;
-  text-decoration: underline;
+font-size: 25px;
+font-weight: bold;
+text-decoration: underline;
 }
 
 #text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 18px;
-  color: black;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 18px;
+color: black;
 }
 
 input {
-  background-color: transparent;
-  border: none;
-  width: 20px;
+background-color: transparent;
+border: none;
+width: 20px;
+}
+
+#einstellungen {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 50px;
+  width: 50px;
 }
