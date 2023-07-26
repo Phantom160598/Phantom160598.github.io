@@ -629,4 +629,4 @@ const dropdown = document.getElementById('farbe');
 const selectedFarbe = dropdown.options[dropdown.selectedIndex].value;
 
 if (selectedFarbe === 'grau') {
-    document.getElementById('bg').changeColour;
+    document.getElementById('bg').style.backgroundColor = gray;
