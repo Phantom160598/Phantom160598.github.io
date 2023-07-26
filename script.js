@@ -624,3 +624,7 @@ if (selectedSize === '8x8') {
 function resetTable() {
   gameTable.innerHTML = '';
 }
+
+const dropdown = document.getElementById('farbe');
+const selectedFarbe = dropdown.options[dropdown.selectedIndex].value;
+
