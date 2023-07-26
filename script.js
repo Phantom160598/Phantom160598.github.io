@@ -629,11 +629,3 @@ function resetTable() {
 
 const dropdown = document.getElementById('farbe');
 const selectedFarbe = dropdown.options[dropdown.selectedIndex].value;
-
-if (selectedFarbe === 'grau') {
-    document.getElementById('bg').style.backgroundColor = "gray";
-    } else if (selectedFarbe === 'schwarz') {
-    document.getElementById('bg').style.backgroundColor = "black";
-    } else if (selectedFarbe === 'weiß') {
-    document.getElementById('bg').style.backgroundColor = "white";
-    }
