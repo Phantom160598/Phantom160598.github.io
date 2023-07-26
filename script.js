@@ -22,6 +22,7 @@ const closesettingsButton = document.getElementById("closesettings");
 settingsButton.addEventListener("click", function() {
 settingsOverlay.style.display = "block";
 closesettingsButton.style.display = "block";
+background.reload;
 });
 
 closesettingsButton.addEventListener("click", function() {
