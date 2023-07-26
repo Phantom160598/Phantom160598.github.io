@@ -7,7 +7,7 @@ const closeButton = document.getElementById("close");
 helpButton.addEventListener("click", function() {
 helpOverlay.style.display = "block";
 closeButton.style.display = "block";
-background.reload(); 
+body.reload(); 
 });
 
 closeButton.addEventListener("click", function() {
