@@ -20,15 +20,14 @@
             const overlay3 = document.getElementById('overlay3');
             overlay3.style.display = 'block';
             const spiel = document.getElementById('spiel');
-            spiel.style.display = 'none';
+            spiel.style.visibility = 'hidden';
 
             const closeBtn3 = document.getElementById('close3');
             closeBtn3.addEventListener('click', () => {
                 const input = prompt('Bitte geben Sie das Passwort ein:');
                 if (input === 'cyrano') {
-                     const spiel = document.getElementById('spiel');
                     overlay3.style.display = 'none';
-                    spiel.style.display = 'initial';
+                    spiel.style.visibility = 'none';
                     generateTable();
                 }
             });
