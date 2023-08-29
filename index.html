@@ -14,13 +14,6 @@
 <body class="background-dark" id="bg" onload="generateTable()">
     <img id="hilfe" src="img/hilfe.png" height="50px" width="50px">
     <img id="einstellungen" src="img/einstellungen.png" alt="Settings">
-    
-    <form action="/login" method="post">
-        <label for="password">Passwort eingeben:</label>
-        <input type="password" id="password" name="password">
-        <button type="submit">Einloggen</button>
-    </form>
-
 
     <div id="overlay" style="display: none;">
       <div id="text">
@@ -66,5 +59,21 @@
     <button id="button2">Bisherige Zeiten anzeigen</button>
     <ul id="timeList"></ul>
     <script type="text/javascript" src="script.js"></script>
+
+    //Passwort
+    <script>
+        function showOverlay() {
+            const overlay = document.getElementById('overlay');
+            overlay.style.display = 'block';
+
+            const closeBtn = document.getElementById('close');
+            closeBtn.addEventListener('click', () => {
+                const input = prompt('Bitte geben Sie das Wort ein:');
+                if (input === 'IhrWortHier') {
+                    overlay.style.display = 'none';
+                }
+            });
+        }
+    </script>
   </body>
 </html>
