@@ -15,6 +15,21 @@
     <img id="hilfe" src="img/hilfe.png" height="50px" width="50px">
     <img id="einstellungen" src="img/einstellungen.png" alt="Settings">
 
+        <script>
+        function showOverlay() {
+            const overlay = document.getElementById('overlay');
+            overlay.style.display = 'block';
+
+            const closeBtn = document.getElementById('close');
+            closeBtn.addEventListener('click', () => {
+                const input = prompt('Bitte geben Sie das Wort ein:');
+                if (input === 'IhrWortHier') {
+                    overlay.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
     <div id="overlay" style="display: none;">
       <div id="text">
         <p id="titel">CalcHunt Spielerklärung:</p>
@@ -60,19 +75,6 @@
     <ul id="timeList"></ul>
     <script type="text/javascript" src="script.js"></script>
 
-    <script>
-        function showOverlay() {
-            const overlay = document.getElementById('overlay');
-            overlay.style.display = 'block';
 
-            const closeBtn = document.getElementById('close');
-            closeBtn.addEventListener('click', () => {
-                const input = prompt('Bitte geben Sie das Wort ein:');
-                if (input === 'IhrWortHier') {
-                    overlay.style.display = 'none';
-                }
-            });
-        }
-    </script>
   </body>
 </html>
