@@ -19,12 +19,15 @@
         function showOverlay3() {
             const overlay3 = document.getElementById('overlay3');
             overlay3.style.display = 'block';
+            const spiel = document.getElementById('spiel');
+            spiel.style.display = 'none';
 
             const closeBtn3 = document.getElementById('close3');
             closeBtn3.addEventListener('click', () => {
                 const input = prompt('Bitte geben Sie das Passwort ein:');
                 if (input === 'cyrano') {
                     overlay3.style.display = 'none';
+                    spiel.style.display = 'block';
                     generateTable();
                 }
             });
@@ -66,21 +69,22 @@
       </div>
       <img id="closesettings" src="img/close.png" height="65px" width="65px" style="display: none;">
     </div>
-
-    <div class="mitte" id="timer" style="display: none;">00:00</div>
+<div id="spiel">
+    <div class="mitte" id="timer">00:00</div>
     <br/>
 
-    <button id="button1" style="display: none;">Lösungszahl Generieren</button>
+    <button id="button1">Lösungszahl Generieren</button>
     <br/>
-    <p style="display: none;">Deine Lösungszahl lautet: <input type="text" id="number1" readonly/> </p>
+    <p>Deine Lösungszahl lautet: <input type="text" id="number1" readonly/> </p>
 
-    <table style="display: none;" id="gameTable"></table>
+    <table id="gameTable"></table>
     <br>
-    <p style="display: none;">Ausgewählte Zahlen: <span id="selectedNumbers"></span></p>
-    <p style="display: none;">Ergebnis (Mit Addition): <input type="text" id="result" readonly></p>
-    <p style="display: none;">Ergebnis (Mit Subtraktion): <input type="text" id="result2" readonly></p>
-    <button id="button2" style="display: none;">Bisherige Zeiten anzeigen</button>
-    <ul id="timeList" style="display: none;"></ul>
+    <p>Ausgewählte Zahlen: <span id="selectedNumbers"></span></p>
+    <p>Ergebnis (Mit Addition): <input type="text" id="result" readonly></p>
+    <p>Ergebnis (Mit Subtraktion): <input type="text" id="result2" readonly></p>
+    <button id="button2">Bisherige Zeiten anzeigen</button>
+    <ul id="timeList"></ul>
+</div>
     <script type="text/javascript" src="script.js"></script>
 
 
