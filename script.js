@@ -629,5 +629,3 @@ function resetTable() {
   gameTable.innerHTML = '';
 }
 
-const dropdown = document.getElementById('farbe');
-const selectedFarbe = dropdown.options[dropdown.selectedIndex].value;
