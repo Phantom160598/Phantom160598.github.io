@@ -26,6 +26,7 @@
             closeBtn3.addEventListener('click', () => {
                 const input = prompt('Bitte geben Sie das Passwort ein:');
                 if (input === 'cyrano') {
+                        const spiel = document.getElementById('spiel');
                     overlay3.style.display = 'none';
                     spiel.style.visibility = 'visible';
                     generateTable();
