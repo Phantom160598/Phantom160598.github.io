@@ -25,10 +25,17 @@
                 const input = prompt('Bitte geben Sie das Wort ein:');
                 if (input === 'IhrWortHier') {
                     overlay.style.display = 'none';
+                    generateTable();
                 }
             });
         }
     </script>
+
+     <div id="overlay3" style="display: none;">
+      <div id="text">
+       
+      <img id="close" src="img/close.png" height="65px" width="65px" style="display: none;">
+    </div>
 
     <div id="overlay" style="display: none;">
       <div id="text">
