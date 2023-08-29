@@ -63,6 +63,21 @@ z-index: 9999;
 text-align: center;
 }
 
+#titel2 {
+font-size: 25px;
+font-weight: bold;
+text-decoration: underline;
+}
+
+#text2 {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 18px;
+color: black;
+}
+
 #titel {
 font-size: 25px;
 font-weight: bold;
