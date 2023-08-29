@@ -1,3 +1,35 @@
+//Passwort
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+
+const correctPassword = 'deinPasswort';
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html');
+});
+
+app.post('/login', (req, res) => {
+    const password = req.body.password;
+
+    if (password === correctPassword) {
+        res.redirect('/game'); // Weiterleitung zur eigentlichen Webseite
+    } else {
+        res.send('Falsches Passwort');
+    }
+});
+
+app.get('/game', (req, res) => {
+    // Hier könntest du den eigentlichen HTML-Inhalt für das Spiel ausliefern
+});
+
+app.listen(3000, () => {
+    console.log('Server gestartet auf Port 3000');
+});
+
+
 // Buttons
 const helpButton = document.getElementById("hilfe");
 const helpOverlay = document.getElementById("overlay");
