@@ -17,14 +17,14 @@
 
         <script>
         function showOverlay3() {
-            const overlay = document.getElementById('overlay3');
-            overlay.style.display = 'block';
+            const overlay3 = document.getElementById('overlay3');
+            overlay3.style.display = 'block';
 
-            const closeBtn = document.getElementById('close2');
-            closeBtn.addEventListener('click', () => {
+            const closeBtn3 = document.getElementById('close3');
+            closeBtn3.addEventListener('click', () => {
                 const input = prompt('Bitte geben Sie das Wort ein:');
                 if (input === 'IhrWortHier') {
-                    overlay.style.display = 'none';
+                    overlay3.style.display = 'none';
                     generateTable();
                 }
             });
@@ -34,7 +34,7 @@
      <div id="overlay3">
       <div id="text">
        
-      <btn id="close2" height="65px" width="65px">
+      <btn id="close3" height="65px" width="65px">
     </div>
 
     <div id="overlay" style="display: none;">
