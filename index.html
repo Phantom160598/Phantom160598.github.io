@@ -1,96 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-
     <link rel="stylesheet" href="stylesheet.css">
-
     <title>CalcHunt</title>
-</head>
-
-<body class="background-dark" id="bg" onload="showOverlay3()">
-    <img id="hilfe" src="img/hilfe.png" height="50px" width="50px">
-    <img id="einstellungen" src="img/einstellungen.png" alt="Settings">
-
-        <script>
-        function showOverlay3() {
-            const overlay3 = document.getElementById('overlay3');
-            overlay3.style.display = 'block';
-            const spiel = document.getElementById('spiel');
-            spiel.style.visibility = 'hidden';
-
-            const closeBtn3 = document.getElementById('close3');
-            closeBtn3.addEventListener('click', () => {
-                const input = prompt('Bitte geben Sie das Passwort ein:');
-                if (input === 'cyrano') {
-                        const spiel = document.getElementById('spiel');
-                    overlay3.style.display = 'hidden';
-                    overlay3.style.visibility = 'hidden';
-                    spiel.style.visibility = 'visible';
-                    generateTable();
-                }
-            });
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
         }
-    </script>
-
-     <div id="overlay3" style="display: block;">
-      <div id="text2">
-          <p id="titel2">Diese Website ist Passwortgeschützt</p>
-        <p>Bitte melde dich beim Entwickler um zugriff zu erhalten </p>
-       
-       <img id="close3" src="img/close.png" height="65px" width="65px">
-    </div>
-
-    <div id="overlay" style="display: none;">
-      <div id="text">
-        <p id="titel">CalcHunt Spielerklärung:</p>
-        Bei CalcHunt geht es um Kopfrechnen. deine Aufgabe ist es, zu allen 50 Lösungszahlen einen Rechenweg zu finden. 
-        <br/>
-        <p><strong>Dabei gibt es Folgende regeln:</strong></p>
-        <strong>1.</strong> Deine Rechnung besteht immer aus 3 Zahlen, die nebeneinander liegen müssen
-        <br/>
-        <br/>
-        <strong>2.</strong> Du musst immer die erste Zahl mit der zweiten Zahl multiplizieren
-        <br/>
-        <br/>
-        <strong>3.</strong> Die dritte Zahl wird entweder addiert oder subtrahiert
-      </div>
-      <img id="close" src="img/close.png" height="65px" width="65px" style="display: none;">
-    </div>
-
-    <div id="overlay2" style="display: none;">
-      <div id="text">
-        <p id="titel">Spielfeldgröße:</p>
-        <select id="größe" name="größe">
-          <option value="6x6">6x6</option>
-          <option value="7x7" selected>7x7</option>
-          <option value="8x8">8x8</option>
-        </select>
-      </div>
-      <img id="closesettings" src="img/close.png" height="65px" width="65px" style="display: none;">
-    </div>
-         
-<div id="spiel">
-    <div class="mitte" id="timer">00:00</div>
-    <br/>
-
-    <button id="button1">Lösungszahl Generieren</button>
-    <br/>
-    <p>Deine Lösungszahl lautet: <input type="text" id="number1" readonly/> </p>
-
-    <table id="gameTable"></table>
-    <br>
-    <p>Ausgewählte Zahlen: <span id="selectedNumbers"></span></p>
-    <p>Ergebnis (Mit Addition): <input type="text" id="result" readonly></p>
-    <p>Ergebnis (Mit Subtraktion): <input type="text" id="result2" readonly></p>
-    <button id="button2">Bisherige Zeiten anzeigen</button>
-    <ul id="timeList"></ul>
-</div>
-    <script type="text/javascript" src="script.js"></script>
-
-
-  </body>
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative; /* Hinzugefügt */
+        }
+        header img.logo {
+            position: absolute;
+            top: 20px; /* Anpassen, um es nach unten oder oben zu verschieben */
+            right: 20px; /* Anpassen, um es nach links oder rechts zu verschieben */
+            width: 100px; /* Anpassen Sie die Breite entsprechend der Größe Ihres Logos */
+            height: auto; /* Dadurch wird das Seitenverhältnis beibehalten */
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: xx-small;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Logo1.PNG" alt="Logo" class="logo"> <!-- Hier dein Logo einfügen -->
+        <h1>CalcHunt</h1>
+        <nav>
+            <ul>
+                <li><a href="#download">App herunterladen</a></li>
+                <li><a href="#datenschutz">Datenschutzrichtlinie</a></li>
+                <li><a href="#support">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="download">
+        <h2>App herunterladen</h2>
+        <p>Holen Sie sich die CalcHunt-App jetzt im App Store:</p>
+        <a href="LINK_ZUM_APP_STORE" target="_blank" rel="noopener noreferrer"><img src="app_store_badge.png" alt="App Store" width="200"></a>
+    </section>
+    <section id="datenschutz">
+        <h2>Datenschutzrichtlinie</h2>
+        <p>Diese Datenschutzrichtlinie gilt für die Nutzung der CalcHunt-App.</p>
+        <h3>Daten, die wir sammeln</h3>
+        <p>Wir sammeln keine persönlichen Daten von den Benutzern dieser App. Die einzigen Daten, die von der App erfasst werden, sind diejenigen, die die Benutzer selbst eingeben, um sie zu verwenden und zu versenden. Diese Daten können Informationen wie Text, Zahlen oder andere Inhalte umfassen, die der Benutzer innerhalb der App erstellt.</p>
+        <h3>Verwendung der Daten</h3>
+        <p>Die von den Benutzern eingegebenen Daten werden ausschließlich dazu verwendet, um sie selbst zu senden. Wir speichern, verarbeiten oder übertragen keine dieser Daten außerhalb der App. Die Sicherheit und Privatsphäre der von den Benutzern eingegebenen Daten haben für uns oberste Priorität.</p>
+        <h3>Datensicherheit</h3>
+        <p>Wir setzen technische und organisatorische Maßnahmen ein, um die Sicherheit der von den Benutzern eingegebenen Daten zu gewährleisten. Dies umfasst den Schutz vor unbefugtem Zugriff, Verlust, Missbrauch oder Offenlegung.</p>
+        <h3>Kontakt</h3>
+        <p>Wenn Sie Fragen oder Bedenken bezüglich unserer Datenschutzpraktiken haben, können Sie uns unter <a href="mailto:cyrano.schneising@web.de">cyrano.schneising@web.de</a> erreichen.</p>
+        <h3>Änderungen an dieser Richtlinie</h3>
+        <p>Wir behalten uns das Recht vor, diese Datenschutzrichtlinie jederzeit zu ändern oder zu aktualisieren. Bitte überprüfen Sie diese Seite regelmäßig auf Aktualisierungen.</p>
+    </section>
+    <section id="support">
+        <h2>Support</h2>
+        <p>Bei Problemen oder Fragen zur App kontaktieren Sie uns bitte unter:</p>
+        <p>Email: <a href="mailto:cyrano.schneising@web.de">cyrano.schneising@web.de</a></p>
+    </section>
+    <footer>
+        <p>© 2024 CalcHunt. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
 </html>
